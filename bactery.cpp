@@ -5,7 +5,7 @@
 using namespace std;
 
 void Bactery::turn() {
-    if (this->turnSide == SideRandom) {
+    if (this->turnSide == Side::SideRandom) {
         this->turnSide = (Side) (rand() % 4);
     }
 }
