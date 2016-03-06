@@ -1,1 +1,7 @@
 *.exe
+*.mk
+Makefile
+*.project
+*.o
+*.d
+*.i
