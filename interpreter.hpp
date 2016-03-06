@@ -7,10 +7,10 @@ class Bactery;
 
 class Interpreter {
 private:
-	Bactery* world[WORLD_SIZE][WORLD_SIZE];
+    Bactery* world[WORLD_SIZE][WORLD_SIZE];
 public:
-	Interpreter();
-	Bactery*[][] getWorld();
+    Interpreter();
+    Bactery*[][] getWorld();
 };
 
 #endif // INTERPRETER_HPP
