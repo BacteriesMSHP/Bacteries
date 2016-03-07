@@ -38,7 +38,7 @@
 		}<br>
 		Табуляцию делаем 4 пробелами (это не лучший вариант, но правильный мы сейчас не потянем), на конце файла должна стоять новая строка. Конец строки, если это настраивается в редакторе, делаем в Unix-style (LF а не CRLF).<br>
 		Множественные константы (типа side) делаем с помощью enum class'ов, именуя сам enum class и его элементы как классы:<br>
-		enum class Side { SideLeft, SideRight, SideBack, SideForward, SideRandom };<br>
+		enum class Side { Left, Right, Back, Forward, Random };<br>
 		Непосредственно enum не используем никогда.<br>
 		В прототипе функции пишем только название типа аргумента, т. е.:<br>
 		void setWeight(int)<br>
@@ -52,8 +52,8 @@
 		<div class="rfc" id="0003">
 			<h3><a href="#0003">RFC #0003 - enum class Side</a></h3>
 			В файле bactery.hpp содержится<br>
-			enum class Side { SideLeft, SideRight, SideBack, SideForward, SideRandom };<br>
-			Его следует использовать для любых "сторон". SideRandom не должен быть состоянием объекта, т. е. когда чему-либо присваивается SideRandom он должен быть сразу изменён на какой-либо из других Side*.
+			enum class Side { Left, Right, Back, Forward, Random };<br>
+			Его следует использовать для любых "сторон". Side::Random не должен быть состоянием объекта, т. е. когда чему-либо присваивается SideRandom он должен быть сразу изменён на какой-либо из других Side*.
 		</div>
 		<div class="rfc" id="0004">
 			<h3><a href="#0004">RFC #0004 - класс Bactery</a></h3>

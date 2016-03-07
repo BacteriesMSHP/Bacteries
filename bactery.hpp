@@ -2,9 +2,9 @@
 #define BACTERY_HPP
 
 #define BACTERY_DEFAULT_WEIGHT 5
-#define BACTERY_DEFAULT_SIDE Side::SideRandom
+#define BACTERY_DEFAULT_SIDE Side::Random
 
-enum class Side { SideLeft, SideRight, SideBack, SideForward, SideRandom };
+enum class Side { Left, Right, Back, Forward, Random };
 
 class League;
 

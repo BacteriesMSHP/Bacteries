@@ -3,7 +3,7 @@
 #include <ctime>
 
 void Bactery::turn() {
-    if (this->turnSide == Side::SideRandom) {
+    if (this->turnSide == Side::Random) {
         this->turnSide = (Side) (rand() % 4);
     }
 }
