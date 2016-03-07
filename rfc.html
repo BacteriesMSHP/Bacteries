@@ -58,13 +58,24 @@
 		<div class="rfc" id="0004">
 			<h3><a href="#0004">RFC #0004 - класс Bactery</a></h3>
 			Класс Bactery содержит поля:<br>
+      League *parent; // указатель на лигу, к которой принадлежит бактерия<br>
 			Side turnSide; // Сторона, в которую повёрнута бактерия<br>
 			int weight; // Вес бактерии<br>
 			int lineNumber; // Номер строки кода, на которой находится бактерия<br>
 			Для всех этих полей установлены сеттеры-геттеры согласно <a href="#0001">RFC #0001</a>.<br>
-			У класса Bactery есть три конструктора. Конструктор по умолчанию инициализирует вес и сторону значениями BACTERY_DEFAULT_WEIGHT и BACTERY_DEFAULT_SIDE, определёнными в bacyery.hpp. lineNumber устанавливается в 1. Также определены конструкторы, принимающие (weight, turnSide) (lineNumber устанавливается в 1) и (weight, turnSide, lineNumber).<br>
+			У класса Bactery есть три конструктора. Конструктор по умолчанию инициализирует вес и сторону значениями BACTERY_DEFAULT_WEIGHT и BACTERY_DEFAULT_SIDE, определёнными в bacyery.hpp. lineNumber устанавливается в 1. Также определены конструкторы, принимающие (parent, weight, turnSide) (lineNumber устанавливается в 1) и (parent, weight, turnSide, lineNumber).<br>
 			Определён приватный метод turn(), который заменяет SideRandom на случайную сторону согласно <a href="#0003">RFC #0003</a>.
 		</div>
+
+		<div class="rfc" id="0004">
+			<h3><a href="#0004">RFC #0005 - класс Legacy</a></h3>
+        Класс Legacy содержит поля:<br>
+				vector<Bactery> bacteries; // массив клеток лиги<br>
+				vector<Command> commands; // массив комманд клеток этой лиги (могут быть и ReapetedCommand)<br>
+        Конструктор: принимает на вход массив комманд, одну клетку<br>
+				Публичные методы:<br>
+				step() - выполняет комманды каждой клетки из лиги до того момента, когда каждая выполнит полноценное действие или умрёт<br>
+		</div>
+
 	</body>
 </html>
-
