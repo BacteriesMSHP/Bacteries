@@ -2,29 +2,14 @@
 #include <cstdlib>
 #include <ctime>
 
-using namespace std;
-
 void Bactery::turn() {
     if (this->turnSide == Side::SideRandom) {
         this->turnSide = (Side) (rand() % 4);
     }
 }
 
-Bactery::Bactery() {
-    srand(time(0));
-    this->weight = BACTERY_DEFAULT_WEIGHT;
-    this->turnSide = BACTERY_DEFAULT_SIDE;
-    this->lineNumber = 1;
-    this->turn();
-}
-
-Bactery::Bactery(int weight, Side turnSide) : weight(weight), turnSide(turnSide) {
-    srand(time(0));
-    this->lineNumber = 1;
-    this->turn();
-}
-
-Bactery::Bactery(int weight, Side turnSide, int lineNumber) : weight(weight), turnSide(turnSide), lineNumber(lineNumber) {
+Bactery::Bactery(League* parent, int weight = BACTERY_DEFAULT_WEIGHT, Side turnSide = BACTERY_DEFAULT_SIDE, int lineNumber = 1) :\
+                parent(parent), weight(weight), turnSide(turnSide), lineNumber(lineNumber) {
     srand(time(0));
     this->turn();
 }
@@ -52,4 +37,8 @@ int Bactery::getLineNumber() {
 
 void Bactery::setLineNumber(int lineNumber) {
     this->lineNumber = lineNumber;
+}
+
+League* Bactery::getLeague() {
+    return this->parent;
 }

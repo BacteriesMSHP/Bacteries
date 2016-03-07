@@ -10,7 +10,7 @@ private:
     Bactery* world[WORLD_SIZE][WORLD_SIZE];
 public:
     Interpreter();
-    Bactery*[][] getWorld();
+    Bactery*[][] &getWorld();
 };
 
 #endif // INTERPRETER_HPP
