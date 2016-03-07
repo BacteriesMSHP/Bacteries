@@ -4,7 +4,7 @@
 class Bactery;
 
 class Command {
-private:
+protected:
     bool isPseudoCommand;
 public:
     Command(bool);
