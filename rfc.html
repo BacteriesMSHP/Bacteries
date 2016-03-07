@@ -63,7 +63,7 @@
 			int weight; // Вес бактерии<br>
 			int lineNumber; // Номер строки кода, на которой находится бактерия<br>
 			Для всех этих полей установлены сеттеры-геттеры согласно <a href="#0001">RFC #0001</a>.<br>
-			У класса Bactery есть два конструктора. Первый принимает (parent, weight, turnSide) (lineNumber устанавливается в 1), второй принимает (parent, weight, turnSide, lineNumber).<br>
+			У класса Bactery есть один конструктор. Он принимает (parent, weight, turnSide, lineNumber), где последние 3 параметра - необязательные. weight и turnSide автоматически устанавливаются соответственно константам в bactery.hpp, lineNumber в 1.<br>
 			Определён приватный метод turn(), который заменяет SideRandom на случайную сторону согласно <a href="#0003">RFC #0003</a>.
 		</div>
 
