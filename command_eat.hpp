@@ -3,15 +3,14 @@
 
 class Bactery;
 
-typedef Bactery*[][] World;
-
 class CommandEat : public Command {
 protected:
 	bool isPseudoCommand;
+	Interpreter* interpreter;
 public:
-	CommandEat();
+	CommandEat(Interpreter*);
 	bool isPseudo();
-	void act(World, int, int);
+	void act(int, int);
 };
 
 #endif

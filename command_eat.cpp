@@ -1,15 +1,16 @@
 #include "command_eat.hpp"
 #include "bactery.hpp"
 
-CommandEat::CommandEat() : Command(false) {
-
+CommandEat::CommandEat(Interpreter* interpreter) : Command(false) {
+	this->interpreter = interpreter;
 }
 
 bool CommandEat::isPseudo() {
 	return this->isPseudoCommand;
 }
 
-void CommandEat::act(World world, int x, int y) {
-	world[x][y]->setWeight(world[x][y]->getWeight() + 1);	
+void CommandEat::act(int x, int y) {
+	Bactery* b = this->interpreter->getWorldItem(x, y);
+	b->setWeight(b->getWeight() + 1);	
 	return;
 }
