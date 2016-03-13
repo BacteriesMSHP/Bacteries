@@ -1,7 +1,7 @@
 #include "command.hpp"
 #include "bactery.hpp"
 
-Command::Command(bool isPseudoCommand = false) : isPseudoCommand(isPseudoCommand) {
+Command::Command(Interpreter *interpreter, bool isPseudoCommand = false) : isPseudoCommand(isPseudoCommand) {
     
 }
 
@@ -9,6 +9,6 @@ bool Command::isPseudo() {
     return this->isPseudoCommand;
 }
 
-void Command::act(Bactery*[][] world, int x, int y) {
+void Command::act(int x, int y) {
     return;
 }

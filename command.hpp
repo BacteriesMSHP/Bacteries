@@ -6,10 +6,11 @@ class Bactery;
 class Command {
 protected:
     bool isPseudoCommand;
+	Interpreter* interpreter;
 public:
-    Command(bool);
+    Command(Interpreter*,bool);
     bool isPseudo();
-    void act(Bactery*[][], int, int);
+    void act(int, int);
 };
 
 #endif
