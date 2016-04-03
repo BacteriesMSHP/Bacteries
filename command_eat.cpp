@@ -9,8 +9,7 @@ bool CommandEat::isPseudo() {
 	return this->isPseudoCommand;
 }
 
-void CommandEat::act(int x, int y) {
-	Bactery* b = this->interpreter->getWorldItem(x, y);
+void CommandEat::act(Bactery *b) {
 	b->setWeight(b->getWeight() + 1);	
 	return;
 }
