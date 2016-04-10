@@ -9,7 +9,6 @@ protected:
 	Interpreter* interpreter;
 public:
 	CommandEat(Interpreter*);
-	bool isPseudo();
 	void act(Bactery *b);
 };
 
