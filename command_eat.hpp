@@ -10,7 +10,7 @@ protected:
 public:
 	CommandEat(Interpreter*);
 	bool isPseudo();
-	void act(int, int);
+	void act(Bactery *b);
 };
 
 #endif
