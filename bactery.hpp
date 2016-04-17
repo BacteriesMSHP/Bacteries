@@ -16,7 +16,7 @@ private:
     int lineNumber;
     void turn(); // Used to change SideRandom to normal side.
 public:
-    Bactery(*League, int, Side, int);
+    Bactery(League*, int, Side, int);
     int getWeight();
     void setWeight(int);
     Side getTurnSide();
